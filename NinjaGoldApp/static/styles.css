@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+
+}
+
+#wrapper{
+    width: 90%;
+    height: 800px;
+    margin: 0px auto;
+    padding-top: 50px;
+    background-image: url(https://www.miningreview.com/wp-content/uploads/2018/02/Gold-NEW.jpg)
+
+
+}
+
+#body_div{
+    background-image: url(https://cdn-images-1.medium.com/max/1200/1*q8P2ObVobC03B3DD9adUhA.jpeg);
+    height: 850px;
+    width: 100%;
+
+}
+
+#header_div{
+    margin-bottom: 20px;
+
+}
+
+#upper_body_gold{
+    display: inline-block;
+    color: white;
+    margin-top: 5px;
+    margin-left: 5px;
+
+}
+
+#upper_body_count{
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 3px;
+    width: 200px;
+    margin-left: 20px;
+    padding-left: 10px;
+    color: white;
+
+
+}
+
+
+#middle_body_container{
+    margin-bottom: 20px;
+    
+
+}
+
+.middle_body_box{
+    width: 20%;
+    height: 200px;
+    padding: 25px;
+    text-align: center;
+    border: 5px solid white;
+    display: inline-grid;
+    color: white;
+
+}
+
+.margin_left{
+    margin-left: 6.402235%;
+
+}
+
+
+.middle_body_button{
+    font-size: 15px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+    width: 100px;
+    height: 25px;
+
+}
+
+
+#activity_div{
+    margin-bottom: 10px;
+    color: black;
+    font-size: 25px;
+
+}
+
+
+#text_area_div{
+    border: 5px solid white;
+    background-color: transparent;
+    width: 100%;
+    color: black;
+    font-size: 20px;
+
+}
+
+#reset_button{
+    font-size: 30px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+    margin-left: 50%;
+    text-decoration: transparent;
+    padding: 10px;
+    
+}

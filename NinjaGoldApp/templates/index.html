@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body></body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ninja Gold</title>
+  {% load static %}
+  <link rel="stylesheet" href=" {% static 'styles.css' %}" />
+</head>
+
+<body id="wrapper">
+  <div id="body_div">
+    <div id="header_div">
+      <div id="upper_body_gold">Your Gold:</div>
+      <div id="upper_body_count">{{ request.session.gold }}</div>
+    </div>
+
+    <div id="middle_body_container">
+      <div class="middle_body_box">
+        <h3>Farm</h3>
+        <p>[ + 10-20 golds]</p>
+        <form action="/process_money" method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="Farm" />
+          <button class="middle_body_button" type="submit">Find Gold</button>
+        </form>
+      </div>
+      <div class="middle_body_box margin_left">
+        <h3>Cave</h3>
+        <p>[ + 5-10 golds]</p>
+        <form action="/process_money" method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="Cave" />
+          <button class="middle_body_button" type="submit">Find Gold</button>
+        </form>
+      </div>
+      <div class="middle_body_box margin_left">
+        <h3>House</h3>
+        <p>[ + 2-5 golds]</p>
+        <form action="/process_money" method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="House" />
+          <button class="middle_body_button" type="submit">Find Gold</button>
+        </form>
+      </div>
+      <div class="middle_body_box margin_left">
+        <h3>Casino</h3>
+        <p>[ +/- 0-50 golds]</p>
+        <form action="/process_money" method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="Casino" />
+          <button class="middle_body_button" type="submit">Find Gold</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="activity_div">
+      Activities:
+    </div>
+
+    <div>
+      <textarea id="text_area_div" name="" id="" cols="30" rows="10">
+                        {% for string in request.session.activity_log %}
+                        {{ string }}
+                        {% endfor %}
+                    </textarea>
+    </div>
+
+    <div style="margin-top: 8%;">
+      <a id="reset_button" href="reset">Reset</a>
+    </div>
+  </div>
+</body>
+
+</html>
